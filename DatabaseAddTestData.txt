@@ -1,0 +1,196 @@
+            //// Add Subjects, Students and Teachers to database
+            //using (var context = new SchoolDbContext())
+            //{
+            //    var subjects = new List<Subject>
+            //        {
+            //            new Subject { Name = "Matte" },
+            //            new Subject { Name = "Programmering 1" },
+            //            new Subject { Name = "Programmering 2" },
+            //            new Subject { Name = "Fysik" },
+            //            new Subject { Name = "Kemi" },
+            //            new Subject { Name = "Avancerad .NET" },
+            //            new Subject { Name = "Databasutveckling" }
+            //        };
+
+            //    List<Student> students = new List<Student>
+            //    {
+            //        new Student { FirstName = "Anna", LastName = "Andersson", Gender = 'F' },
+            //        new Student { FirstName = "Björn", LastName = "Bengtsson", Gender = 'M' },
+            //        new Student { FirstName = "Caroline", LastName = "Carlsson", Gender = 'F' },
+            //        new Student { FirstName = "David", LastName = "Danielsson", Gender = 'M' },
+            //        new Student { FirstName = "Elin", LastName = "Ekström", Gender = 'F' },
+            //        new Student { FirstName = "Fredrik", LastName = "Forsberg", Gender = 'M' },
+            //        new Student { FirstName = "Greta", LastName = "Gustavsson", Gender = 'F' },
+            //        new Student { FirstName = "Henrik", LastName = "Hansson", Gender = 'M' },
+            //        new Student { FirstName = "Ida", LastName = "Isaksson", Gender = 'F' },
+            //        new Student { FirstName = "Johan", LastName = "Johansson", Gender = 'M' }
+            //    };
+
+            //    List<Teacher> teachers = new List<Teacher>
+            //    {
+            //        new Teacher { FirstName = "Maria", LastName = "Andersson" },
+            //        new Teacher { FirstName = "Erik", LastName = "Bengtsson" },
+            //        new Teacher { FirstName = "Sara", LastName = "Carlsson" },
+            //        new Teacher { FirstName = "Karl", LastName = "Danielsson" },
+            //        new Teacher { FirstName = "Lena", LastName = "Ekström" },
+            //        new Teacher { FirstName = "Olof", LastName = "Forsberg" },
+            //        new Teacher { FirstName = "Anna", LastName = "Gustavsson" },
+            //        new Teacher { FirstName = "Peter", LastName = "Hansson" },
+            //        new Teacher { FirstName = "Emma", LastName = "Isaksson" },
+            //        new Teacher { FirstName = "Jörgen", LastName = "Johansson" }
+            //    };
+
+
+
+
+            //    context.Subjects.AddRange(subjects);
+            //    context.Students.AddRange(students);
+            //    context.Teachers.AddRange(teachers);
+            //    context.SaveChanges();
+            //}
+
+
+            //// Add Courses to database.
+            //using (var context = new SchoolDbContext())
+            //{
+
+            //    var courses = new List<Course>
+            //    {
+            //        new Course
+            //        {
+            //            Name = "SUT22",
+            //            Teacher = context.Teachers.Where(t => t.TeacherId == 1).FirstOrDefault<Teacher>(),
+            //            Subjects = new List<Subject>
+            //            {
+            //                context.Subjects.Where(s => s.SubjectId == 1).FirstOrDefault<Subject>(),
+            //                context.Subjects.Where(s => s.SubjectId == 4).FirstOrDefault<Subject>(),
+            //                context.Subjects.Where(s => s.SubjectId == 6).FirstOrDefault<Subject>(),
+            //                context.Subjects.Where(s => s.SubjectId == 7).FirstOrDefault<Subject>()
+
+            //            },
+            //            Students = new List<Student>
+            //            {
+            //                context.Students.Where(s => s.StudentId == 1).FirstOrDefault<Student>(),
+            //                context.Students.Where(s => s.StudentId == 3).FirstOrDefault<Student>(),
+            //                context.Students.Where(s => s.StudentId == 4).FirstOrDefault<Student>(),
+            //                context.Students.Where(s => s.StudentId == 10).FirstOrDefault<Student>(),
+            //            }
+            //        },
+            //        new Course
+            //        {
+            //            Name = "Prg20",
+            //            Teacher = context.Teachers.Where(t => t.TeacherId == 4).FirstOrDefault<Teacher>(),
+
+            //            Subjects = new List<Subject>
+            //            {
+            //                context.Subjects.Where(s => s.SubjectId == 2).FirstOrDefault<Subject>(),
+            //                context.Subjects.Where(s => s.SubjectId == 3).FirstOrDefault<Subject>()
+            //            },
+            //                                    Students = new List<Student>
+            //            {
+            //                context.Students.Where(s => s.StudentId == 2).FirstOrDefault<Student>(),
+            //                context.Students.Where(s => s.StudentId == 7).FirstOrDefault<Student>(),
+            //                context.Students.Where(s => s.StudentId == 9).FirstOrDefault<Student>(),
+            //            }
+            //        },
+            //        new Course
+            //        {
+            //            Name = "Natur",
+            //            Teacher = context.Teachers.Where(t => t.TeacherId == 8).FirstOrDefault<Teacher>(),
+
+            //            Subjects = new List<Subject>
+            //            {
+            //                context.Subjects.Where(s => s.SubjectId == 1).FirstOrDefault<Subject>(),
+            //                context.Subjects.Where(s => s.SubjectId == 4).FirstOrDefault<Subject>(),
+            //                context.Subjects.Where(s => s.SubjectId == 5).FirstOrDefault<Subject>()
+            //            },
+            //                                    Students = new List<Student>
+            //            {
+            //                context.Students.Where(s => s.StudentId == 5).FirstOrDefault<Student>(),
+            //                context.Students.Where(s => s.StudentId == 8).FirstOrDefault<Student>(),
+            //                context.Students.Where(s => s.StudentId == 6).FirstOrDefault<Student>(),
+            //            }
+            //        }
+            //    };
+
+            //    context.Courses.AddRange(courses);
+            //    context.SaveChanges();
+            //}
+
+            //using (SchoolDbContext context = new SchoolDbContext())
+            //{
+            //    List<Subject> teacherList = context.Subjects.ToList();
+            //    context.Subjects.RemoveRange(teacherList);
+            //    context.SaveChanges();
+            //}
+
+
+            //using (var context = new SchoolDbContext())
+            //{
+            //    var subjectToUpdate = context.Subjects.FirstOrDefault(s => s.SubjectId == 1);
+            //    subjectToUpdate.Teachers = new List<Teacher>
+            //    {
+            //        context.Teachers.FirstOrDefault(t => t.TeacherId == 1),
+            //        context.Teachers.FirstOrDefault(t => t.TeacherId == 3),
+            //        context.Teachers.FirstOrDefault(t => t.TeacherId == 6),
+            //        context.Teachers.FirstOrDefault(t => t.TeacherId == 7),
+            //    };
+            //    context.SaveChanges();
+            //}
+
+            //using (var context = new SchoolDbContext())
+            //{
+            //    var s2 = context.Subjects.FirstOrDefault(s => s.SubjectId == 2);
+            //    s2.Teachers = new List<Teacher>
+            //    {
+            //        context.Teachers.FirstOrDefault(t => t.TeacherId == 1),
+            //        context.Teachers.FirstOrDefault(t => t.TeacherId == 4),
+            //        context.Teachers.FirstOrDefault(t => t.TeacherId == 8),
+            //        context.Teachers.FirstOrDefault(t => t.TeacherId == 9),
+            //    }; 
+                
+            //    var s3 = context.Subjects.FirstOrDefault(s => s.SubjectId == 3);
+            //    s3.Teachers = new List<Teacher>
+            //    {
+            //        context.Teachers.FirstOrDefault(t => t.TeacherId == 2),
+            //        context.Teachers.FirstOrDefault(t => t.TeacherId == 3),
+
+            //    };          
+                
+            //    var s4 = context.Subjects.FirstOrDefault(s => s.SubjectId == 4);
+            //    s4.Teachers = new List<Teacher>
+            //    {
+            //        context.Teachers.FirstOrDefault(t => t.TeacherId == 5),
+            //        context.Teachers.FirstOrDefault(t => t.TeacherId == 3),
+
+            //    };
+                
+            //    var s5 = context.Subjects.FirstOrDefault(s => s.SubjectId == 5);
+            //    s5.Teachers = new List<Teacher>
+            //    {
+            //        context.Teachers.FirstOrDefault(t => t.TeacherId == 9),
+            //        context.Teachers.FirstOrDefault(t => t.TeacherId == 6),
+
+            //    };
+
+            //    var s6 = context.Subjects.FirstOrDefault(s => s.SubjectId == 6);
+            //    s6.Teachers = new List<Teacher>
+            //    {
+            //        context.Teachers.FirstOrDefault(t => t.TeacherId == 7),
+            //        context.Teachers.FirstOrDefault(t => t.TeacherId == 2),
+            //        context.Teachers.FirstOrDefault(t => t.TeacherId == 10)
+
+            //    };
+
+            //    var s7 = context.Subjects.FirstOrDefault(s => s.SubjectId == 7);
+            //    s7.Teachers = new List<Teacher>
+            //    {
+            //        context.Teachers.FirstOrDefault(t => t.TeacherId == 9),
+            //        context.Teachers.FirstOrDefault(t => t.TeacherId == 4),
+
+            //    };
+
+
+
+            //    context.SaveChanges();
+            //}

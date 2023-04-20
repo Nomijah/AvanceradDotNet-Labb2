@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AvanceradDotNet-Labb2", "AvanceradDotNet-Labb2.csproj", "{50D118A7-B75B-428B-8E31-48E3F6F266F2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{94BE3050-9099-4170-AF03-A9E171730E54}"
+	ProjectSection(SolutionItems) = preProject
+		DatabaseAddTestData.txt = DatabaseAddTestData.txt
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{50D118A7-B75B-428B-8E31-48E3F6F266F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50D118A7-B75B-428B-8E31-48E3F6F266F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50D118A7-B75B-428B-8E31-48E3F6F266F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50D118A7-B75B-428B-8E31-48E3F6F266F2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {54693229-5FDE-4AC4-8E7A-5BC9744D3A46}
+	EndGlobalSection
+EndGlobal
